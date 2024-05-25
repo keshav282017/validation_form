@@ -67,6 +67,7 @@ import { useNavigate } from 'react-router-dom';
       if(!values.country) errors.country = "country  is required"  ;
       if(!values.city) errors.city = "city is required"  ;
       if(!values.aadharno) errors.aadharno = "Aadhar number is required"  ;
+      
       if(!values.panno) errors.panno = "pancard number is required"  ;
       
       return errors ; 
@@ -86,10 +87,10 @@ import { useNavigate } from 'react-router-dom';
   
     return (
       <>
-        <div className="bg-gradient-to-br from-purple-300 to-purple-800 min-cnt pb-10 flex min-h-screen justify-center align-center ">
+        <div className=" to-slate-700  min-cnt pb-10 flex min-h-screen justify-center align-center ">
         
   
-          <div className="  bg-purple-50 relative overflow-auto child-cnt mt-16  text-base ">
+          <div className="  bg-white relative overflow-auto child-cnt mt-16  text-base ">
             <div className="  m-5 p-5">
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -207,7 +208,7 @@ import { useNavigate } from 'react-router-dom';
                   >
                     <option value="">Select Country</option>
                     <option value="India">India</option>
-                    <option value="UK">USA</option>
+                    <option value="USA">USA</option>
                   </select>
                   <span>{errors.country}</span>
                 </div>
@@ -229,10 +230,10 @@ import { useNavigate } from 'react-router-dom';
                   <option value="Pune">Pune</option>
                   <option value="Delhi">Delhi</option>
                   </>}
-                  if{formval.country === "UK" && <> 
+                  if{formval.country === "USA" && <> 
                   <option value=""></option>
-                  <option value="London">London</option>
-                  <option value="Birmingham">Birmingham</option>
+                  <option value="New York">New York</option>
+                  <option value="California">California</option>
                   </>}
                   </select>
                   <span>{errors.city }</span>
@@ -275,7 +276,7 @@ import { useNavigate } from 'react-router-dom';
                   type="submit"
                   className="btn_submit 
             rounded-lg  text-3xl font-light
-            bg-gradient-to-br from-purple-300 to-purple-800  text-white w-72"
+            bg-gradient-to-br from-slate-300 to-slate-800  text-white w-72"
                 >
                   submit
                 </button>

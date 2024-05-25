@@ -7,7 +7,7 @@ const Details = () => {
 
   return (
     <div>
-      <h2>Form Details</h2>
+      <p className='text-center font-xl underline font-bold'>Form Details</p>
       <p><strong>First Name:</strong> {formval.firstname}</p>
       <p><strong>Last Name:</strong> {formval.secondname}</p>
       <p><strong>Username:</strong> {formval.username}</p>
