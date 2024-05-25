@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState , useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './index.css'
+
+
 
  const Form =()=>{
    const initialVal = {
@@ -51,22 +52,22 @@ import './index.css'
     const validate =(values) => { 
       const errors = {};
       const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-      if(!values.firstname)  errors.firstname = "first name is required" ; 
-      if(!values.secondname)  errors.secondname = "last name is required" ; 
-      if(!values.username)  errors.username = "user name is required" ; 
-      if(!values.email)  errors.email = "email  is required" ; 
-      else if(!regex.test(values.email)) errors.email = "not a valid email" ; 
+      if(!values.firstname)  errors.firstname = "First name is required" ; 
+      if(!values.secondname)  errors.secondname = "Last name is required" ; 
+      if(!values.username)  errors.username = "User name is required" ; 
+      if(!values.email)  errors.email = "Email  is required" ; 
+      else if(!regex.test(values.email)) errors.email = "please enter a valid email" ; 
   
   
       if(!values.password) errors.password = "password is requried" ; 
       // else if(!values.password.length <4) errors.password = "password length is not less than 4";
       // else if(!values.password.length >10) errors.password = "password length is not greater than 10";
   
-      if(!values.phoneno) errors.phoneno = "phoneNO is required"  ;
+      if(!values.phoneno) errors.phoneno = "phone number  is required"  ;
       if(!values.country) errors.country = "country  is required"  ;
-      if(!values.city) errors.city = "cityO is required"  ;
-      if(!values.aadharno) errors.aadharno = "aadharno is required"  ;
-      if(!values.panno) errors.panno = "panno is required"  ;
+      if(!values.city) errors.city = "city is required"  ;
+      if(!values.aadharno) errors.aadharno = "Aadhar number is required"  ;
+      if(!values.panno) errors.panno = "pancard number is required"  ;
       
       return errors ; 
       
@@ -85,10 +86,10 @@ import './index.css'
   
     return (
       <>
-        <div className="  fixed overflow-hidden min-cnt pb-10 flex min-h-screen bg-gray-800 justify-center align-center ">
+        <div className="bg-gradient-to-br from-purple-300 to-purple-800 min-cnt pb-10 flex min-h-screen justify-center align-center ">
         
   
-          <div className=" relative overflow-auto child-cnt mt-16  text-base  bg-white">
+          <div className="  bg-purple-50 relative overflow-auto child-cnt mt-16  text-base ">
             <div className="  m-5 p-5">
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -206,7 +207,7 @@ import './index.css'
                   >
                     <option value="">Select Country</option>
                     <option value="India">India</option>
-                    <option value="USA">USA</option>
+                    <option value="UK">USA</option>
                   </select>
                   <span>{errors.country}</span>
                 </div>
@@ -225,13 +226,13 @@ import './index.css'
                   >
                     if{formval.country === "India"  && <>
                   <option value=""></option>
-                  <option value="Mumbai">Mumbai</option>
+                  <option value="Pune">Pune</option>
                   <option value="Delhi">Delhi</option>
                   </>}
-                  if{formval.country === "USA" && <> 
+                  if{formval.country === "UK" && <> 
                   <option value=""></option>
-                  <option value="California">California</option>
-                  <option value="Los Angeles">Los Angeles</option>
+                  <option value="London">London</option>
+                  <option value="Birmingham">Birmingham</option>
                   </>}
                   </select>
                   <span>{errors.city }</span>
@@ -274,7 +275,7 @@ import './index.css'
                   type="submit"
                   className="btn_submit 
             rounded-lg  text-3xl font-light
-             bg-gray-700  text-white w-72"
+            bg-gradient-to-br from-purple-300 to-purple-800  text-white w-72"
                 >
                   submit
                 </button>
